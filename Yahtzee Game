@@ -1,0 +1,38 @@
+public class Yahtzee {
+
+    //Main loop
+    public static void main(String[] args){
+
+        int currentRolls = keepRolling();
+        System.out.println("In " + currentRolls + " Rolls ");
+    }
+
+    public static int keepRolling(){
+
+        int dice1 = rollDice();
+        int dice2 = rollDice();
+        int dice3 = rollDice();
+        int count = 1;
+
+        while(!(dice1 == dice2 && dice2 == dice3)){
+
+            dice1 = rollDice();
+            dice2 = rollDice();
+            dice3 = rollDice();
+            count = count +1;
+            System.out.println(dice1 + " | " + dice2 + " | " + dice3);
+        }
+
+        System.out.println("It's a match !!!");
+        return count;
+    }
+
+    public static int rollDice(){
+
+        double dice = Math.random() * 6;
+        int randomInt = (int) dice;
+        return randomInt;
+    }
+
+
+}
