@@ -1,0 +1,25 @@
+public class BreakTest {
+
+
+    public static void main(String[] args){
+
+        for(int i = 0; i <= 6;i++){
+
+            int roll = rollDice(6);
+            System.out.println(roll);
+            if(roll == 3){
+
+                System.out.println("Loops Break");
+                break;
+            }
+        }
+        System.out.println("Finish");
+    }
+
+    static int rollDice(int maxCount){
+
+        double randomNumber = Math.random() * maxCount;
+        int randomInt = (int) randomNumber;
+        return randomInt;
+    }
+}
