@@ -1,0 +1,88 @@
+public class Functions {
+
+    public static void main(String[] args){
+
+        summary(5,10);
+
+        minus(10,5);
+
+        sayHelloTo("New York");
+
+       System.out.println( makeChange(10, 40));
+
+       int dice1 = rollDice();
+       int dice2 = rollDice();
+       System.out.println("Roll 1 :" + dice1);
+       System.out.println("Roll 2 :" + dice2);
+
+
+    }
+
+    static void summary(int a, int b){
+
+        System.out.println(a + b);
+    }
+
+    static void minus(int a, int b){
+
+        System.out.println(a - b);
+    }
+
+    static void sayHelloTo(String location){
+
+
+        System.out.println("Hello, " + location.toString());
+    }
+
+    public void weatherInterpreter(int temperature){
+
+        if(temperature >30){
+
+            System.out.println("Hot");
+        } else if( temperature  < 5){
+
+            System.out.println("Cold");
+        } else{
+
+            System.out.println("Not too hot, not too cold");
+        }
+    }
+
+   static double makeChange(double itemCost, double dollarsProvided){
+
+        double change = dollarsProvided - itemCost;
+        return change;
+    }
+
+
+    //Random numbers
+    
+    void Random(){
+
+        double randomNumber = Math.random();
+        randomNumber = randomNumber * 10;
+
+        int randomInt = (int) randomNumber;
+    }
+
+    public static int rollDice(){
+
+        double randomNumber = Math.random()* 6;
+        randomNumber = randomNumber + 1;
+
+        int randomInt= (int) randomNumber;
+        return randomInt;
+    }
+
+    public static int randomInRange(int from, int to){
+
+        double randomNumber = Math.random();
+        randomNumber = randomNumber * to;
+        randomNumber = randomNumber + from;
+        int randomInt = (int) randomNumber;
+
+        return randomInt;
+    }
+
+
+}
