@@ -1,0 +1,26 @@
+public class Arrays {
+
+    static String[] names = {"Name length ", "test", "asdonadsjkldfsn", "adskjlwefnklwenkl"};
+
+    public static void main(String[] args) {
+
+
+        String longestName = findLongestName(names);
+        System.out.println(longestName);
+    }
+
+    static String findLongestName(String[] names) {
+
+        int size = names.length;
+        String longestName = names[0];
+
+        for(int i = 1; i <size; i++){
+
+            if(names[i].length() > longestName.length()){
+
+                longestName = names[i];
+            }
+        }
+        return longestName;
+    }
+}
